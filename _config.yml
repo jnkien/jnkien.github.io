@@ -1,0 +1,14 @@
+# Welcome to Jekyll!
+
+# Site settings
+title: Some Tech Posts
+email: jnkien@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Some posts about Tech/Data. Some are tips, some are tutorials, some are just here to make your dev life easier. Hope you enjoy :-)
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+twitter_username: jnkien
+github_username:  jnkien
+
+# Build settings
+markdown: kramdown
