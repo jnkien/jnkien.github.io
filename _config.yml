@@ -4,7 +4,7 @@
 title: Beat-AI
 email: jnkien@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Some Mario IA stuff with OpenAI and PyTorch.
+  Some Mario AI stuff with OpenAI and PyTorch.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 github_username: jnkien
