@@ -293,6 +293,22 @@ pre {
     }
 }
 
+.section-peach-left {
+    text-align: left;
+    font-size: 30px;
+    padding: 2% 0% 8% 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    tbody {
+        vertical-align: middle;
+        }
+    blockquote {
+        font-style: normal;
+    }
+}
+
 .section-luigi-left {
     text-align: left;
     font-size: 30px;
@@ -353,4 +369,19 @@ pre {
 
 li:not(:last-child) { 
     margin-bottom: 8px;  
+}
+
+.ppo-wrapper {
+    display: inline-block;
+}
+
+.ppo-run {
+    width: 240px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.end {
+    margin-top: 40px;
 }
