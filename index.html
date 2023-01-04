@@ -4,20 +4,52 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+    <h1 class="page-heading">What is better, <b>Machine Learning</b> on human generated data or <b>Reinforcement
+            Learning</b> from
+        scratch?</h1>
+    <h1 class="page-heading">Please Mario, help us... <img id="mario" src="{{site.baseurl}}/assets/mario.JPG">
+    </h1>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <div class="section left">
+        <table>
+            <thead>
+                <tr>
+                    <td>
+                        <p>PyTorch Conv3D neural network on 3K frames</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <iframe
+                            src="https://www.youtube.com/embed/e2oKpqIBek0?autoplay=1&mute=1&loop=1&playlist=e2oKpqIBek0"
+                            width="240" height="256" allow="autoplay"></iframe>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="section right">
+        <table>
+            <thead>
+                <tr>
+                    <td>
+                        <p>Proximal Policy Optimization on 100K frames</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <iframe
+                            src="https://www.youtube.com/embed/IWPCUmsvTBY?autoplay=1&mute=1&loop=1&playlist=IWPCUmsvTBY"
+                            width="240" height="256" allow="autoplay"></iframe>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    </div>
 
 </div>
