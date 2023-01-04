@@ -6,7 +6,7 @@ email: jnkien@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Some Mario IA stuff with OpenAI and PyTorch.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+url: "https://jnkien.github.io/" # the base hostname & protocol for your site
 github_username: jnkien
 
 # Build settings
