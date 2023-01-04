@@ -240,15 +240,87 @@ pre {
     height: auto;
 }
 
+#luigi {
+    width: 80%;
+    height: auto;
+}
+
+#heart {
+    width: 20px;
+    height: auto;
+}
+
 .section {
     text-align: center;
     font-size: 30px;
-    padding: 8%;
+    padding: 2% 8% 8% 8%;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    width: 30%;
+    tbody {
+        vertical-align: top;
+        }
+}
+
+.section-bowser-left {
+    text-align: center;
+    font-size: 30px;
+    padding: 2% 8% 8% 0%;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 500px;
-    width: 30%;
+    width: 25%;
+    tbody {
+        vertical-align: middle;
+        }
+}
+
+.section-bowser-right {
+    text-align: left;
+    font-size: 20px;
+    padding: 2% 0% 8% 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65%;
+    tbody {
+        vertical-align: middle;
+        }
+    float: left;
+    blockquote {
+        font-style: normal;
+    }
+}
+
+.section-luigi-left {
+    text-align: left;
+    font-size: 30px;
+    padding: 2% 8% 8% 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65%;
+    tbody {
+        vertical-align: middle;
+        }
+    blockquote {
+        font-style: normal;
+    }
+}
+
+.section-luigi-right {
+    text-align: left;
+    font-size: 20px;
+    padding: 2% 0% 8% 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    tbody {
+        vertical-align: middle;
+        }
+    float: left;
 }
 
 .left {
@@ -261,4 +333,8 @@ pre {
 
 .section table {
     font-size: 15px;
+}
+
+li:not(:last-child) { 
+    margin-bottom: 8px;  
 }
