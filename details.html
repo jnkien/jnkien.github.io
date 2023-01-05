@@ -1,0 +1,151 @@
+---
+layout: page
+title: More details
+permalink: /details/
+---
+
+<div>
+    <h2>Why this project?</h2>
+    <p>
+        Since childhood, <b>I'm passionate about video games</b>. Mario games are a classic and timeless reference. 
+        I will never stop to be amazed by the quality of level design that is involved. Over the years, 
+        I was also quite disappointed about the <b>behavior of bots</b> that you can see when playing with or against. 
+        It was like their behavior were hardcoded in some way and didn't feel human at all.
+    </p>
+    <p>Then, some events catch my attention:
+        <ul>
+            <li>
+                In 1997, an IBM supercomputer called <b>Deep Blue</b> won a six-game chess match versus the world chess champion Garry Kasparov,
+            </li>
+            <li>
+                In 2015, <b>Google DeepMind's AlphaGo program</b> defeated the European Go champion Fan Hui and top-ranked Lee Sedol in 2016,
+            </li>
+            <li>
+                April 13, 2019, <b>OpenAI Five</b>, the Dota 2 AI developed by OpenAI wins back-to-back games versus Dota 2 world champions OG 
+                at Finals, becoming the first AI to beat the world champions in an esports game. I remember me saying to a friend that there is 
+                no way an AI can beat human at this game since it requires teamwork and collaboration. I was indeed wrong and deeply interested 
+                but who could have thought that you could train an AI against itself for 10 000 years of games?
+            </li>
+        </ul>
+    </p>
+    <p>
+        While Deep Blue used brute computational force to evaluate millions of positions, the others rely on neural netwoks and reinforcement learning. 
+        In the end, I discovered that OpenAI team released <a href="https://www.gymlibrary.dev/">Gym</a>, an open source Python library for developing 
+        and comparing reinforcement learning algorithms. I decided to play with it and specially with Mario games. Thankfully, a 
+        <a href="https://github.com/Kautenja/gym-super-mario-bros">Gym environment for Super Mario Bros.</a> is available for me to use.
+    </p>
+    <p>
+        I strongly believe reinforcement learning should get more interest because <b>the field of applications are yet under estimated</b>. I think it 
+        could be a good tool to run experiences that could have been limited by human constraints (time, money, risk?) but also for discovering bug or 
+        glitch (e.g. <a href="https://www.youtube.com/watch?v=hx7kvTZLHYI&ab_channel=Matt%27sRamblings">physic engine exploit</a> or 
+        <a href="https://www.theregister.com/2018/03/02/ai_qbert_bug/">bug discovery</a>).
+    </p>
+    <h2>What is this project for?</h2>
+    <p>
+        This project is a playground for me to apply ML and RL algorithms on my preferred victim named Mario! And since we can exceed human time capacity with RL, 
+        I wanted to know in <b>what way Reinforcement Learning from scratch could be better than Machine Learning (as complex as it can be) on human generated data</b>. 
+        Of course, keeping in mind that RL is more suited for the task of playing video games.
+    </p>
+    <h2>How does it work in a nutshell?</h2>
+    <p>
+        Gym is an open source Python library for developing and comparing reinforcement learning algorithms by providing a standard API to communicate between learning 
+        algorithms and environments, as well as a standard set of environments compliant with that API.
+    </p>
+    <p>
+        In a RL framework, there is 5 elements that are relevant to know:
+        <table class="custom-center">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>agent</b></td>
+                    <td><img id="mario-small" src="{{site.baseurl}}/assets/mario_go.png"></td>
+                </tr>
+                <tr>
+                    <td><b>actions</b></td>
+                    <td><img id="pad" src="{{site.baseurl}}/assets/pad.png"></td>
+                </tr>
+                <tr>
+                    <td><b>environment</b></td>
+                    <td><img id="env" src="{{site.baseurl}}/assets/env.png"></td>
+                </tr>
+                <tr>
+                    <td><b>reward</b></td>
+                    <td>A value returned by the environement and given to the agent based on the action performed in the environment.</td>
+                </tr>
+                <tr>
+                    <td><b>policy</b></td>
+                    <td>A strategy to determine the next action based on the (state-action-reward). This is basically the core of a RL algorithm.</td>
+                </tr>
+            </tbody>
+        </table>
+    </p>
+    <p>
+        Agent acts with certain actions which transform the state of the agent, each action is 
+        associated with reward value produced by the environment. The next action is returned by the policy that 
+        determines the best action for the agent given the current state, the current reward and the expected reward. 
+        Roughly speaking, a policy is an agent's way of behaving at a given time. Now, policies can be deterministic and stochastic, 
+        but finding an optimal policy is at the core of a RL project and building new policy system falls in the field of RL research.
+    </p>
+    <p>
+        Given the next action by the policy and the current state, the environment proceed to a <code>.step()</code> and returned the reward and the new state. And so on...
+    </p>
+    <p>
+        The main difficulty remains the <b>Q-learning</b> aspect of a policy. The Q-learning is a function that computes the potential reward given a particular action at a given state.
+        However, it would be too simple, different actions in different states will have different associated reward values. When the environment becomes too complex, neural nets are 
+        used to compute the Q-learning. This is what is called <b>Deep RL</b>.
+    </p>
+    <p>
+        Below is a simplified view of a RL process:
+    </p>
+    <img src="{{site.baseurl}}/assets/rl_process.JPG">
+    <p>
+        The policy we use in this project is the <a href="https://openai.com/blog/openai-baselines-ppo/"><b>Proximal Policy Optimization</b></a> developed by OpenAI which claims 
+        to perform comparably or better than state-of-the-art approaches while being much simpler to implement and tune. 
+        PPO has become the default reinforcement learning algorithm at OpenAI because of its ease of use and good performance.
+    </p>
+    <p>
+        Below is an overview of the main scripts developed in the <a href="https://github.com/jnkien/beat-ai">python project</a> and how do they fit together:
+    </p>
+    <img src="{{site.baseurl}}/assets/python_process.JPG">
+    <h2>Improvement/Extension</h2>
+    <div class="section-toad-left left">
+        <blockquote>
+            <p>
+                My dear friend Mario, I will enlight you with my recommendations, cheers!
+            </p>
+        </blockquote>
+    </div>
+    <div class="section-luigi-right">
+        <img id="toad" src="{{site.baseurl}}/assets/toad.png">
+    </div>
+    <p>
+        <ul class="display-inline">
+            <li>
+                you could use some computer vision and specifically some <b>object detection</b> to know what to do in specific situation (like jumping when facing a Koopa),
+            </li>
+            <li>
+                you could play with the <b>different parameters</b> (stack, learning rate ...) and test other policies and others neural network architectures,
+            </li>
+            <li>
+                to be fair, both algorithms RL and ML should be compared on a <b>new level</b>,
+            </li>
+            <li>
+                you should store models in a <b>model registry</b> and data and metadata in a <b>proper database</b>,
+            </li>
+            <li>
+                your project need some <b>testing</b> and you should implement test data with unit test ASAP.
+            </li>
+            <li>
+                the Q-learning could be speed up with <b>CUDA</b>,
+            </li>
+            <li>
+                maybe you could have less scripts by using abstract classes and a factory pattern, try it out!
+            </li>
+        </ul>
+    </p>
+</div>

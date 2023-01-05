@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 /**
  * Reset some basic elements
  */
@@ -57,7 +59,7 @@ ol,
 dl,
 figure,
 %vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
+    margin-bottom: math.div($spacing-unit, 2);
 }
 
 
@@ -142,7 +144,7 @@ a {
 blockquote {
     color: $grey-color;
     border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
+    padding-left: math.div($spacing-unit, 2);
     font-size: 18px;
     letter-spacing: -1px;
     font-style: italic;
@@ -197,8 +199,8 @@ pre {
     @include media-query($on-laptop) {
         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
         max-width: calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
+        padding-right: math.div($spacing-unit, 2);
+        padding-left: math.div($spacing-unit, 2);
     }
 }
 
@@ -240,8 +242,28 @@ pre {
     height: auto;
 }
 
+#mario-small {
+    width: 25%;
+    height: auto;
+}
+
+#pad {
+    width: 25%;
+    height: auto;
+}
+
+#env {
+    width: 50%;
+    height: auto;
+}
+
 #luigi {
     width: 80%;
+    height: auto;
+}
+
+#toad {
+    width: 20%;
     height: auto;
 }
 
@@ -301,6 +323,22 @@ pre {
     align-items: center;
     justify-content: center;
     width: 30%;
+    tbody {
+        vertical-align: middle;
+        }
+    blockquote {
+        font-style: normal;
+    }
+}
+
+.section-toad-left {
+    text-align: left;
+    font-size: 30px;
+    padding: 2% 8% 8% 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
     tbody {
         vertical-align: middle;
         }
@@ -392,4 +430,25 @@ li:not(:last-child) {
 
 .mario-loop {
     width: 8%
+}
+
+.custom-center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+}
+
+$color-code-background: #272822;
+$color-code-color: #f8f8f2;
+
+code {
+    background-color: $color-code-background;
+    color: $color-code-color;
+    border-radius: 0.3em;
+    padding: 4px 5px 6px;
+    white-space: nowrap;
+}
+
+.display-inline {
+    display: inline-block;
 }
